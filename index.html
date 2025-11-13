@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Agarwal • Portfolio</title>
+    <meta name="description" content="Clean & analytical data analyst portfolio showcasing skills, projects, and contact information." />
+
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2563EB',   // blue
+              accent: '#059669',    // green
+              neutralText: '#1F2937',
+              divider: '#E5E7EB',
+              bg: '#F9FAFB',
+            },
+          }
+        }
+      }
+    </script>
+
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+      /* Subtle entrance animation */
+      @keyframes fade-in-up {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in-up { animation: fade-in-up 700ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+      /* Hide horizontal scrollbar for filter row on supported browsers */
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+  /* When single-close-mode is active, hide the top-right close button so only one Close is visible */
+  .single-close-mode .modal-close-top { display: none; }
+    </style>
+  </head>
+
+  <body class="bg-bg text-neutralText antialiased">
+    <!-- Header / Navigation -->
+    <header id="site-header" class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur border-b border-divider shadow-sm transition-shadow">
+      <nav class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <!-- Brand -->
+          <a href="#home" class="text-lg sm:text-xl font-semibold tracking-tight hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 rounded px-1">
+            Aditya Agarwal
+          </a>
+
+          <!-- Desktop Nav -->
+          <ul class="hidden md:flex items-center gap-6 text-sm">
+            <li><a class="nav-link hover:text-primary transition-colors" href="#home">Home</a></li>
+            <li><a class="nav-link hover:text-primary transition-colors" href="#about">About</a></li>
+            <li><a class="nav-link hover:text-primary transition-colors" href="#skills">Skills</a></li>
+            <li><a class="nav-link hover:text-primary transition-colors" href="#projects">Projects</a></li>
+            <li><a class="nav-link hover:text-primary transition-colors" href="#contact">Contact</a></li>
+          </ul>
+
+          <!-- Mobile toggle -->
+          <button id="mobile-toggle" class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-neutralText hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="md:hidden hidden border-t border-divider pb-4">
+          <ul class="flex flex-col gap-1 pt-2 text-sm">
+            <li><a class="nav-link block rounded px-3 py-2 hover:bg-gray-100" href="#home">Home</a></li>
+            <li><a class="nav-link block rounded px-3 py-2 hover:bg-gray-100" href="#about">About</a></li>
+            <li><a class="nav-link block rounded px-3 py-2 hover:bg-gray-100" href="#skills">Skills</a></li>
+            <li><a class="nav-link block rounded px-3 py-2 hover:bg-gray-100" href="#projects">Projects</a></li>
+            <li><a class="nav-link block rounded px-3 py-2 hover:bg-gray-100" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero / Home -->
+      <section id="home" class="scroll-mt-24 md:scroll-mt-28 pt-28 md:pt-32 pb-16 md:pb-24">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid gap-10 md:grid-cols-2 md:items-center">
+          <!-- Left: Intro -->
+          <div class="space-y-6 animate-fade-in-up">
+            <div class="inline-flex items-center gap-2 rounded-full border border-divider bg-white px-3 py-1 text-xs text-neutral-600">
+              <span class="inline-block h-2 w-2 rounded-full bg-accent"></span>
+              Open to Data Analyst roles
+            </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+              Hi, I'm <span class="text-primary">Aditya Agarwal</span>
+            </h1>
+            <p class="text-base sm:text-lg text-neutral-700 max-w-prose">
+              An aspiring Data Analyst passionate about uncovering insights and telling stories with data. I focus on clean analysis, clear visuals, and actionable recommendations.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <a href="#projects" class="inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 text-white font-medium shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40">
+                View My Projects
+              </a>
+              <button id="view-resume-btn" type="button" class="inline-flex items-center justify-center rounded-md border border-primary px-5 py-3 text-primary font-medium bg-white hover:bg-primary/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30">
+                View Resume
+              </button>
+              <a href="#contact" id="contact-me-btn" class="inline-flex items-center justify-center rounded-md border border-primary px-5 py-3 text-primary font-medium bg-white hover:bg-primary/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30">Contact Me</a>
+            </div>
+          </div>
+
+          <!-- Right: Photo / Placeholder -->
+          <div class="relative">
+            <!-- Circular outer frame with subtle gradient border (slightly smaller) -->
+            <div class="mx-auto w-64 sm:w-72 md:w-80 h-64 sm:h-72 md:h-80 rounded-full bg-gradient-to-br from-primary/10 via-accent/10 to-primary/10 p-1 shadow-md">
+              <!-- Inner white circle that clips the image -->
+              <div class="h-full w-full rounded-full bg-white overflow-hidden grid place-items-center">
+                <img src="assets/images/image.png" alt="Aditya Agarwal headshot" class="h-full w-full object-cover" />
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Placeholder sections to enable navigation (to be built next) -->
+      <section id="about" class="scroll-mt-24 md:scroll-mt-28 py-24 border-t border-divider">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+          <div class="grid gap-6 md:grid-cols-2 items-start">
+            <div>
+              <p class="text-neutral-700">
+                My journey into data analytics started with curiosity — I’ve always enjoyed finding patterns, asking questions, and understanding how things work behind the scenes.
+<br>Today, I use SQL, Excel, Python, and BI tools to analyze data, uncover insights, and build dashboards that help businesses make smarter decisions.
+
+I love working on analytics projects. I’m constantly learning, improving, and pushing myself to solve more complex problems.
+              </div>
+            <div>
+              <p class="text-neutral-700"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="scroll-mt-24 md:scroll-mt-28 py-24 border-t border-divider">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-semibold mb-4">Skills & Tools</h2>
+          <p class="text-neutral-600 mb-6">A concise overview of the technical skills and tools I use regularly. Hover a skill to see a short note about how I use it.</p>
+
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <!-- Data Analysis -->
+            <div class="rounded-lg border border-divider bg-white p-4">
+              <h3 class="font-medium mb-2">Data Analysis</h3>
+              <ul class="space-y-2 text-sm text-neutral-700">
+                <li title="Used for data manipulation, cleaning, and analysis">Python (Pandas, NumPy)</li>
+                <li title="Exploratory analysis, statistical summaries">Statistics</li>
+                <li title="Fast exploratory scripts and notebooks">Jupyter Notebooks</li>
+                <li title="Spreadsheet analysis and quick prototyping">Excel</li>
+              </ul>
+            </div>
+
+            <!-- Visualization -->
+            <div class="rounded-lg border border-divider bg-white p-4">
+              <h3 class="font-medium mb-2">Data Visualization</h3>
+              <ul class="space-y-2 text-sm text-neutral-700">
+                <li title="Static plots and exploratory charts">Matplotlib / Seaborn</li>
+                <li title="Interactive dashboards and storyboarding">Power BI</li>
+                <li title="Lightweight charts for web">Plotly</li>
+              </ul>
+            </div>
+
+            <!-- Databases -->
+            <div class="rounded-lg border border-divider bg-white p-4">
+              <h3 class="font-medium mb-2">Databases</h3>
+              <ul class="space-y-2 text-sm text-neutral-700">
+                <li title="Analytical queries and joins">SQL (PostgreSQL)</li>
+                <li title="Analytical queries and joins">MySQL</li>
+              </ul>
+            </div>
+
+            <!-- Tools -->
+            <div class="rounded-lg border border-divider bg-white p-4">
+              <h3 class="font-medium mb-2">Tools & Workflow</h3>
+              <ul class="space-y-2 text-sm text-neutral-700">
+                <li title="Version control and collaboration">Git & GitHub</li>
+                <li title="IDE for development">VS Code</li>
+                <li title="Data cleaning and transformation in spreadsheets">Power Query</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="scroll-mt-24 md:scroll-mt-28 py-24 border-t border-divider">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+            <div>
+              <h2 class="text-2xl font-semibold">Projects</h2>
+              <p class="text-neutral-600 mt-1 max-w-prose">A curated selection of hands-on work. Use the filters to view projects by tool/tech.</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex flex-nowrap items-center gap-2 overflow-x-auto no-scrollbar" aria-label="Project filters">
+              <button class="filter-btn whitespace-nowrap rounded-full border border-divider bg-white px-4 py-2 text-sm font-medium hover:border-primary hover:text-primary aria-pressed:!bg-primary aria-pressed:!text-white" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter-btn whitespace-nowrap rounded-full border border-divider bg-white px-4 py-2 text-sm font-medium hover:border-primary hover:text-primary aria-pressed:!bg-primary aria-pressed:!text-white" data-filter="excel">Excel</button>
+              <button class="filter-btn whitespace-nowrap rounded-full border border-divider bg-white px-4 py-2 text-sm font-medium hover:border-primary hover:text-primary aria-pressed:!bg-primary aria-pressed:!text-white" data-filter="sql">SQL</button>
+              <button class="filter-btn whitespace-nowrap rounded-full border border-divider bg-white px-4 py-2 text-sm font-medium hover:border-primary hover:text-primary aria-pressed:!bg-primary aria-pressed:!text-white" data-filter="powerbi">Power BI</button>
+              <button class="filter-btn whitespace-nowrap rounded-full border border-divider bg-white px-4 py-2 text-sm font-medium hover:border-primary hover:text-primary aria-pressed:!bg-primary aria-pressed:!text-white" data-filter="python">Python</button>
+              <button class="filter-btn whitespace-nowrap rounded-full border border-divider bg-white px-4 py-2 text-sm font-medium hover:border-primary hover:text-primary aria-pressed:!bg-primary aria-pressed:!text-white" data-filter="powerquery">Power Query</button>
+            </div>
+          </div>
+
+          <!-- Project Grid -->
+          <div id="project-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- rfm-analysis -->
+            <article class="project-card group rounded-xl border border-divider bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-tags="excel,sql">
+              <div class="aspect-video overflow-hidden bg-neutral-100">
+                <img src="assets\images\rfm analysis.png" alt="Cover - RFM Analysis" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
+              </div>
+              <div class="p-5 space-y-3">
+                <h3 class="font-semibold text-lg">RFM Analysis</h3>
+                <p class="text-sm text-neutral-600">Performed RFM segmentation on 4K+ customers via SQL + Excel dashboards, identifying top 15% loyal buyers contributing 60% of total revenue.</p>
+                <div class="flex flex-wrap gap-2 text-xs">
+                  <span class="rounded-full bg-neutral-100 text-neutral-700 px-2 py-1">SQL</span>
+                  <span class="rounded-full bg-neutral-100 text-neutral-700 px-2 py-1">Excel</span>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <a href="https://github.com/AdityaAgarwal1602/rfm-analysis" target="_blank" class="inline-flex items-center rounded-md border border-divider text-sm px-3 py-2 hover:bg-neutral-50">GitHub</a>
+                  <button class="btn-case inline-flex items-center rounded-md border border-primary text-primary text-sm px-3 py-2 hover:bg-primary/5" type="button">Case Study</button>
+                </div>
+                <div class="case-content hidden">
+                  <h4 class="text-xl font-semibold mb-3">🛍️ RFM Analysis: Online Retail Dataset</h4>
+                  <div class="space-y-3 text-neutral-700">
+                    <p><span class="font-medium">The Problem:</span> Which customer segments deliver the most value and which ones need attention to improve retention and revenue growth?</p>
+                    <p><span class="font-medium">The Process:</span> Performed a complete RFM (Recency, Frequency, Monetary) analysis using the UCI Online Retail dataset. Data was imported into PostgreSQL, cleaned by removing null and invalid entries, and then transformed using SQL to compute RFM scores per customer. Customers were segmented into business-friendly cohorts such as Champions, Loyal, At-Risk, and Churned based on RFM quantiles. Processed data was exported to Excel, where interactive dashboards visualized customer segments, revenue share, and loyalty trends.</p>
+                    <p><span class="font-medium">The Result:</span> Identified high-value, loyal customers contributing the majority of revenue and highlighted at-risk groups requiring retention strategies. The final Excel dashboard empowered stakeholders to prioritize CRM and marketing efforts, leading to better customer targeting and revenue optimization.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Zomato Delivery Performance Analysis (Power BI) -->
+            <article class="project-card group rounded-xl border border-divider bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-tags="powerbi,powerquery">
+              <div class="aspect-video overflow-hidden bg-neutral-100">
+                <img src="assets/images/zomato delivery performance.png" alt="Cover - Zomato Delivery Performance" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
+              </div>
+              <div class="p-5 space-y-3">
+                <h3 class="font-semibold text-lg">Zomato Delivery Performance Analysis</h3>
+                <p class="text-sm text-neutral-600">A Power BI dashboard analysing delivery delays, operational bottlenecks, traffic & weather impacts, and driver performance to recommend operational improvements.</p>
+                <div class="flex flex-wrap gap-2 text-xs">
+                  <span class="rounded-full bg-neutral-100 text-neutral-700 px-2 py-1">Power BI</span>
+                  <span class="rounded-full bg-neutral-100 text-neutral-700 px-2 py-1">Power Query</span>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <a href="https://github.com/AdityaAgarwal1602/Zomato-Delivery-Performance-Analysis" target="_blank" class="inline-flex items-center rounded-md border border-divider text-sm px-3 py-2 hover:bg-neutral-50">GitHub</a>
+                  <button class="btn-case inline-flex items-center rounded-md border border-primary text-primary text-sm px-3 py-2 hover:bg-primary/5" type="button">Case Study</button>
+                </div>
+                <div class="case-content hidden">
+                  <h4 class="text-xl font-semibold mb-3">Zomato Delivery Performance Analysis</h4>
+                  <div class="space-y-3 text-neutral-700">
+                    <p><span class="font-medium">The Problem:</span> Long and inconsistent delivery times across regions, peak hours, and varying traffic/weather conditions impacting customer experience and operations.</p>
+                    <p><span class="font-medium">The Process:</span> Cleaned and transformed CSV data in Power Query, engineered delivery-duration and contextual features, then built a Power BI report with KPIs, area comparisons, traffic & weather impact visuals, and driver-level analysis.</p>
+                    <p><span class="font-medium">The Result:</span> Identified Semi-Urban areas and 19:00–21:00 peak hours as key delay drivers; jam traffic and multi-drop orders add significant minutes. Recommendations included peak-hour staffing, limiting multi-drops in heavy traffic, and targeted route optimisation.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Movie-Data-Analysis -->
+            <article class="project-card group rounded-xl border border-divider bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-tags="python">
+              <div class="aspect-video overflow-hidden bg-neutral-100">
+                <img src="assets\images\movie data analysis.png" alt="Cover - Movie Data Analysis" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
+              </div>
+              <div class="p-5 space-y-3">
+                <h3 class="font-semibold text-lg">Movie Data Analysis</h3>
+                <p class="text-sm text-neutral-600">Uncovered genre-wise profitability and rating drivers by analyzing 5K+ IMDb movies using Python (Pandas | Seaborn), helping predict high-grossing genres with 25% better accuracy.</p>
+                <div class="flex flex-wrap gap-2 text-xs">
+                  <span class="rounded-full bg-neutral-100 text-neutral-700 px-2 py-1">Python</span>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <a href="https://github.com/AdityaAgarwal1602/Movie-Data-Analysis" target="_blank" class="inline-flex items-center rounded-md border border-divider text-sm px-3 py-2 hover:bg-neutral-50">GitHub</a>
+                  <button class="btn-case inline-flex items-center rounded-md border border-primary text-primary text-sm px-3 py-2 hover:bg-primary/5" type="button">Case Study</button>
+                </div>
+                <div class="case-content hidden">
+                  <h4 class="text-xl font-semibold mb-3">🎬 IMDb Movie Data Analysis</h4>
+                  <div class="space-y-3 text-neutral-700">
+                    <p><span class="font-medium">The Problem:</span> Which factors drive a movie’s box office success, and how do genres, budgets, and ratings correlate with profitability?</p>
+                    <p><span class="font-medium">The Process:</span> Cleaned and standardized financial data (removed $, commas, coerced numeric types), handled missing values and duplicates, and engineered new features like <code>main_genre</code> and <code>profit</code>. Conducted exploratory analysis using pandas, numpy, matplotlib, and seaborn, answering business-style questions through visualizations such as rating distributions, budget vs. gross regression, genre-wise boxplots, runtime trends since 1980, and director profitability comparisons.</p>
+                    <p><span class="font-medium">The Result:</span> Revealed strong positive correlation between budget and gross revenue, identified Drama and Action as top-performing genres by average ratings, and spotlighted top 10 directors generating the highest average profit. The insights clarified which genres and production strategies maximize audience ratings and profitability.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ABC_Mart-Sales-Analysis -->
+            <article class="project-card group rounded-xl border border-divider bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-tags="excel,powerquery">
+              <div class="aspect-video overflow-hidden bg-neutral-100">
+                <img src="assets\images\ABC mart sales analysis.png" alt="Cover - ABC Mart Sales Analysis" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
+              </div>
+              <div class="p-5 space-y-3">
+                <h3 class="font-semibold text-lg">ABC Mart Sales Analysis</h3>
+                <p class="text-sm text-neutral-600">Built an interactive Excel dashboard revealing 7 PM as peak sales hour and increasing profitability by 12% through data-driven promotion timing.</p>
+                <div class="flex flex-wrap gap-2 text-xs">
+                  <span class="rounded-full bg-neutral-100 text-neutral-700 px-2 py-1">Power Query</span>
+                  <span class="rounded-full bg-neutral-100 text-neutral-700 px-2 py-1">Excel</span>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <a href="https://github.com/AdityaAgarwal1602/ABC_Mart-Sales-Analysis" target="_blank" class="inline-flex items-center rounded-md border border-divider text-sm px-3 py-2 hover:bg-neutral-50">GitHub</a>
+                  <button class="btn-case inline-flex items-center rounded-md border border-primary text-primary text-sm px-3 py-2 hover:bg-primary/5" type="button">Case Study</button>
+                </div>
+                <div class="case-content hidden">
+                  <h4 class="text-xl font-semibold mb-3">🏪 ABC Mart: Q1 2019 Sales & Profitability Analysis</h4>
+                  <div class="space-y-3 text-neutral-700">
+                    <p><span class="font-medium">The Problem:</span> How can ABC Mart improve profitability and sales performance based on Q1 2019 transaction data, while understanding customer behavior and product trends?</p>
+                    <p><span class="font-medium">The Process:</span> Executed a complete end-to-end Excel analytics workflow using Power Query, PivotTables, and custom formulas. The dataset was cleaned and standardized in Power Query (date-time formatting, column naming, null handling), then analyzed using PivotTables to calculate total sales, profit, and customer segmentation. An interactive single-page Excel dashboard was built featuring dynamic charts, automated highlights for key metrics, and filters for month, product line, and customer type — enabling real-time insights and exploration.</p>
+                    <p><span class="font-medium">The Result:</span> Uncovered that Food &amp; Beverages led total sales, while Health &amp; Beauty products generated the highest profit margin. Found that Member customers contributed 18% more revenue than normal shoppers and that peak purchasing occurred at 7 PM. Recommendation: target evening promotions for Food &amp; Beverage products to maximize both sales and profitability.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- sql_pizza_sales_analysis -->
+            <article class="project-card group rounded-xl border border-divider bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-tags="sql">
+              <div class="aspect-video overflow-hidden bg-neutral-100">
+                <img src="assets\images\SQL pizza sales analysis.png" alt="Cover - SQL Pizza Sales Analysis" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
+              </div>
+              <div class="p-5 space-y-3">
+                <h3 class="font-semibold text-lg">Pizza Sales Analysis</h3>
+                <p class="text-sm text-neutral-600">Queried and visualized 48K+ pizza orders in PostgreSQL to find top-selling pizzas and Friday peak sales (22% of revenue) for smarter inventory planning.</p>
+                <div class="flex flex-wrap gap-2 text-xs">
+                  <span class="rounded-full bg-neutral-100 text-neutral-700 px-2 py-1">SQL</span>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <a href="https://github.com/AdityaAgarwal1602/sql_pizza_sales_analysis" target="_blank" class="inline-flex items-center rounded-md border border-divider text-sm px-3 py-2 hover:bg-neutral-50">GitHub</a>
+                  <button class="btn-case inline-flex items-center rounded-md border border-primary text-primary text-sm px-3 py-2 hover:bg-primary/5" type="button">Case Study</button>
+                </div>
+                <div class="case-content hidden">
+                  <h4 class="text-xl font-semibold mb-3">🍕 Pizza Sales SQL Analysis Project</h4>
+                  <div class="space-y-3 text-neutral-700">
+                    <p><span class="font-medium">The Problem:</span> How can a pizza business identify its best-selling products, understand customer ordering behavior, and optimize pricing and inventory strategies based on real sales data?</p>
+                    <p><span class="font-medium">The Process:</span> Executed a full SQL-based analytical workflow using PostgreSQL. Created relational tables for orders, pizzas, and pizza types, and imported multiple CSVs using the COPY command. Cleaned and standardized data (e.g., uppercasing size entries, verifying keys), then explored using aggregation, joins, and window functions. Performed detailed business analysis to compute total revenue, average order value, revenue by category, peak sales days, and compared high- vs low-priced pizza performance through CTEs and subqueries.</p>
+                    <p><span class="font-medium">The Result:</span> Discovered that Fridays generated the highest revenue, Large-sized pizzas sold most frequently, and premium pizzas accounted for the bulk of profits despite lower order volumes. These findings informed menu optimization, pricing, and promotional timing.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- sql_retail_sales -->
+            <article class="project-card group rounded-xl border border-divider bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-tags="sql">
+              <div class="aspect-video overflow-hidden bg-neutral-100">
+                <img src="assets\images\Retail sales analysis.png" alt="Cover - SQL Retail Sales" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
+              </div>
+              <div class="p-5 space-y-3">
+                <h3 class="font-semibold text-lg">SQL Retail Sales Analysis</h3>
+                <p class="text-sm text-neutral-600">Analyzed 36K+ retail transactions to uncover customer and category trends, enabling 18% more effective promotions through time-based insights.</p>
+                <div class="flex flex-wrap gap-2 text-xs">
+                  <span class="rounded-full bg-neutral-100 text-neutral-700 px-2 py-1">SQL</span>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <a href="https://github.com/AdityaAgarwal1602/sql_retail_sales" target="_blank" class="inline-flex items-center rounded-md border border-divider text-sm px-3 py-2 hover:bg-neutral-50">GitHub</a>
+                  <button class="btn-case inline-flex items-center rounded-md border border-primary text-primary text-sm px-3 py-2 hover:bg-primary/5" type="button">Case Study</button>
+                </div>
+                <div class="case-content hidden">
+                  <h4 class="text-xl font-semibold mb-3">🛒 Retail Sales Analysis Using SQL</h4>
+                  <div class="space-y-3 text-neutral-700">
+                    <p><span class="font-medium">The Problem:</span> How can a retail business leverage SQL to understand customer behavior, identify top-selling categories, and uncover time-based sales trends to improve profitability?</p>
+                    <p><span class="font-medium">The Process:</span> Designed and implemented a PostgreSQL database for retail transactions, modeling customer, product, and sales information. Performed data cleaning by removing null and inconsistent records, standardized categories, and ensured referential integrity. Explored the dataset to identify total transactions, unique customers, and product categories before conducting advanced analytical queries. Derived key business insights using SQL aggregations, date functions, conditional filtering, and grouping, including top customers, best-selling categories, and sales performance by gender and time of day.</p>
+                    <p><span class="font-medium">The Result:</span> Revealed that Clothing and Electronics were the top-selling categories, with evening hours driving the highest order volume. Identified top five high-value customers driving repeat sales and provided a foundation for customer segmentation and promotional planning.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="scroll-mt-24 md:scroll-mt-28 py-24 border-t border-divider">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-semibold mb-2">Let's Connect</h2>
+          <p class="text-neutral-600 mb-6 max-w-prose">I'm currently seeking new opportunities as a Data Analyst. I'd love to connect and chat about how I can help your team.</p>
+
+          <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 max-w-3xl">
+            <!-- Email -->
+            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=aditya.agr.2005@gmail.com" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 rounded-lg border border-divider bg-white px-4 py-3 hover:border-primary hover:bg-primary/5 transition-colors" aria-label="Email Aditya via Gmail">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 text-primary">
+                <!-- Envelope icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M1.5 6.75A2.25 2.25 0 013.75 4.5h16.5a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0120.25 19.5H3.75a2.25 2.25 0 01-2.25-2.25V6.75zm2.028-.528A.75.75 0 003 7.5v.136l8.403 5.249a1.5 1.5 0 001.594 0L21 7.636V7.5a.75.75 0 00-.528-1.278H3.528z"/></svg>
+              </span>
+              <div>
+                <div class="font-medium">Email</div>
+                <div class="text-sm text-neutral-600">aditya.agr.2005@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/aditya-agarwal-dev/" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 rounded-lg border border-divider bg-white px-4 py-3 hover:border-primary hover:bg-primary/5 transition-colors" aria-label="LinkedIn profile">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 text-primary">
+                <!-- LinkedIn icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M4.983 3.5C4.983 4.604 4.088 5.5 2.983 5.5 1.879 5.5.983 4.604.983 3.5.983 2.396 1.879 1.5 2.983 1.5c1.105 0 2 .896 2 2zM.75 8.25h4.5v14.5H.75V8.25zM9.25 8.25h4.308v1.982h.062c.6-1.136 2.067-2.336 4.255-2.336 4.551 0 5.392 2.995 5.392 6.888v7.966h-4.5v-7.064c0-1.685-.03-3.852-2.348-3.852-2.351 0-2.711 1.834-2.711 3.73v7.186h-4.5V8.25z"/></svg>
+              </span>
+              <div>
+                <div class="font-medium">LinkedIn</div>
+                <div class="text-sm text-neutral-600">/aditya-agarwal-dev</div>
+              </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/AdityaAgarwal1602" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 rounded-lg border border-divider bg-white px-4 py-3 hover:border-primary hover:bg-primary/5 transition-colors" aria-label="GitHub profile">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 text-primary">
+                <!-- GitHub icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M12 .5C5.648.5.5 5.648.5 12c0 5.087 3.292 9.39 7.865 10.91.575.106.785-.25.785-.556 0-.274-.01-1.001-.015-1.965-3.2.696-3.874-1.543-3.874-1.543-.523-1.33-1.278-1.684-1.278-1.684-1.045-.714.08-.699.08-.699 1.155.081 1.764 1.187 1.764 1.187 1.028 1.762 2.697 1.253 3.353.958.104-.745.402-1.253.731-1.54-2.554-.291-5.24-1.277-5.24-5.684 0-1.255.448-2.28 1.183-3.084-.119-.29-.513-1.463.112-3.05 0 0 .966-.31 3.166 1.179.918-.255 1.903-.382 2.882-.386.979.004 1.964.131 2.882.386 2.2-1.49 3.165-1.179 3.165-1.179.626 1.587.232 2.76.114 3.05.737.804 1.182 1.83 1.182 3.084 0 4.417-2.69 5.39-5.253 5.676.415.357.787 1.062.787 2.142 0 1.546-.014 2.793-.014 3.173 0 .309.207.667.792.554C20.213 21.386 23.5 17.086 23.5 12 23.5 5.648 18.352.5 12 .5z" clip-rule="evenodd"/></svg>
+              </span>
+              <div>
+                <div class="font-medium">GitHub</div>
+                <div class="text-sm text-neutral-600">@AdityaAgarwal1602</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer placeholder -->
+    <footer class="border-t border-divider py-8">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center text-sm text-neutral-500">
+        © <span id="year"></span> Aditya Agarwal. Built with HTML, Tailwind CSS, and lots of coffee.
+      </div>
+    </footer>
+
+    <!-- Case Study Modal -->
+    <div id="case-modal" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+      <div class="absolute inset-0 bg-black/40" data-close="overlay"></div>
+      <div class="absolute inset-0 grid place-items-center px-4">
+        <div role="dialog" aria-modal="true" aria-labelledby="case-modal-title" class="w-full max-w-2xl rounded-xl bg-white shadow-xl ring-1 ring-black/5 overflow-hidden">
+          <div class="flex items-center justify-between border-b border-divider px-5 py-3">
+            <h3 id="case-modal-title" class="text-lg font-semibold">Case Study</h3>
+            <button type="button" class="modal-close modal-close-top rounded-md p-2 hover:bg-neutral-100" aria-label="Close case study">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+          <div id="case-modal-body" class="px-5 py-4">
+            <!-- Dynamic content injected here -->
+          </div>
+          <div class="border-t border-divider px-5 py-3 flex justify-end">
+            <button type="button" class="modal-close rounded-md border border-divider px-4 py-2 text-sm hover:bg-neutral-50">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

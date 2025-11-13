@@ -1,0 +1,21 @@
+# Node / dev
+node_modules/
+.vscode/
+.env
+.DS_Store
+Thumbs.db
+.idea/
+*.log
+
+# OS
+*.lnk
+
+# Build artifacts
+dist/
+.build/
+
+# Tailwind / caches
+.cache/
+
+# personal files
+/*.pem
