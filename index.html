@@ -138,6 +138,7 @@
 <br>Today, I use SQL, Excel, Python, and BI tools to analyze data, uncover insights, and build dashboards that help businesses make smarter decisions.
 
 I love working on analytics projects. I’m constantly learning, improving, and pushing myself to solve more complex problems.
+              </p>
               </div>
             <div>
               <p class="text-neutral-700"></p>
@@ -219,7 +220,7 @@ I love working on analytics projects. I’m constantly learning, improving, and 
             <!-- rfm-analysis -->
             <article class="project-card group rounded-xl border border-divider bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-tags="excel,sql">
               <div class="aspect-video overflow-hidden bg-neutral-100">
-                <img src="assets\images\rfm analysis.png" alt="Cover - RFM Analysis" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
+                <img src="assets/images/rfm analysis.png" alt="Cover - RFM Analysis" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
               </div>
               <div class="p-5 space-y-3">
                 <h3 class="font-semibold text-lg">RFM Analysis</h3>
@@ -273,7 +274,7 @@ I love working on analytics projects. I’m constantly learning, improving, and 
             <!-- Movie-Data-Analysis -->
             <article class="project-card group rounded-xl border border-divider bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-tags="python">
               <div class="aspect-video overflow-hidden bg-neutral-100">
-                <img src="assets\images\movie data analysis.png" alt="Cover - Movie Data Analysis" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
+                <img src="assets/images/movie data analysis.png" alt="Cover - Movie Data Analysis" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
               </div>
               <div class="p-5 space-y-3">
                 <h3 class="font-semibold text-lg">Movie Data Analysis</h3>
@@ -299,7 +300,7 @@ I love working on analytics projects. I’m constantly learning, improving, and 
             <!-- ABC_Mart-Sales-Analysis -->
             <article class="project-card group rounded-xl border border-divider bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-tags="excel,powerquery">
               <div class="aspect-video overflow-hidden bg-neutral-100">
-                <img src="assets\images\ABC mart sales analysis.png" alt="Cover - ABC Mart Sales Analysis" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
+                <img src="assets/images/ABC mart sales analysis.png" alt="Cover - ABC Mart Sales Analysis" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
               </div>
               <div class="p-5 space-y-3">
                 <h3 class="font-semibold text-lg">ABC Mart Sales Analysis</h3>
@@ -326,7 +327,7 @@ I love working on analytics projects. I’m constantly learning, improving, and 
             <!-- sql_pizza_sales_analysis -->
             <article class="project-card group rounded-xl border border-divider bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-tags="sql">
               <div class="aspect-video overflow-hidden bg-neutral-100">
-                <img src="assets\images\SQL pizza sales analysis.png" alt="Cover - SQL Pizza Sales Analysis" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
+                <img src="assets/images/SQL pizza sales analysis.png" alt="Cover - SQL Pizza Sales Analysis" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
               </div>
               <div class="p-5 space-y-3">
                 <h3 class="font-semibold text-lg">Pizza Sales Analysis</h3>
@@ -352,7 +353,7 @@ I love working on analytics projects. I’m constantly learning, improving, and 
             <!-- sql_retail_sales -->
             <article class="project-card group rounded-xl border border-divider bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-tags="sql">
               <div class="aspect-video overflow-hidden bg-neutral-100">
-                <img src="assets\images\Retail sales analysis.png" alt="Cover - SQL Retail Sales" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
+                <img src="assets/images/Retail sales analysis.png" alt="Cover - SQL Retail Sales" loading="lazy" decoding="async" class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform" />
               </div>
               <div class="p-5 space-y-3">
                 <h3 class="font-semibold text-lg">SQL Retail Sales Analysis</h3>
@@ -374,7 +375,6 @@ I love working on analytics projects. I’m constantly learning, improving, and 
                 </div>
               </div>
             </article>
-          </div>
           </div>
         </div>
       </section>
@@ -435,17 +435,20 @@ I love working on analytics projects. I’m constantly learning, improving, and 
     <!-- Case Study Modal -->
     <div id="case-modal" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
       <div class="absolute inset-0 bg-black/40" data-close="overlay"></div>
-      <div class="absolute inset-0 grid place-items-center px-4">
-        <div role="dialog" aria-modal="true" aria-labelledby="case-modal-title" class="w-full max-w-2xl rounded-xl bg-white shadow-xl ring-1 ring-black/5 overflow-hidden">
+      <!-- Scrollable container; top-align on mobile, center on md+ -->
+      <div class="absolute inset-0 flex items-start md:items-center justify-center px-4 py-6 overflow-y-auto">
+        <!-- Dialog constrained in height with flex layout -->
+        <div role="dialog" aria-modal="true" aria-labelledby="case-modal-title" class="w-full max-w-2xl max-h-[92vh] md:max-h-[85vh] flex flex-col rounded-xl bg-white shadow-xl ring-1 ring-black/5 overflow-hidden">
           <div class="flex items-center justify-between border-b border-divider px-5 py-3">
             <h3 id="case-modal-title" class="text-lg font-semibold">Case Study</h3>
-            <button type="button" class="modal-close modal-close-top rounded-md p-2 hover:bg-neutral-100" aria-label="Close case study">
+            <button type="button" class="modal-close modal-close-top rounded-md p-3 md:p-2 hover:bg-neutral-100" aria-label="Close case study">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
               </svg>
             </button>
           </div>
-          <div id="case-modal-body" class="px-5 py-4">
+          <!-- Make the body scrollable within the dialog -->
+          <div id="case-modal-body" class="px-5 py-4 flex-1 overflow-y-auto">
             <!-- Dynamic content injected here -->
           </div>
           <div class="border-t border-divider px-5 py-3 flex justify-end">
